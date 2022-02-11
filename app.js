@@ -55,14 +55,14 @@ var populate = () => {
 
 // skaiciuoja teisingus atsakymus
 var check = guess => {
-    if (guess.innerText === questions[questionNumber].answer) resultNumber++;
+    if (guess.innerText === questions[questionNumber].answer.toUpperCase()) resultNumber++;
 }
 
 // rodo progresa
 var showProgress = () => {
     questionNumber++;
     // uzkrauna progreso skaiciu
-    progress.innerText = questionNumber + 1;
+    progress.innerText = questionNumber;
 }
 // Priskiria funkcija mygtukams
 button.forEach((x) => {
